@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+
+</head>
+<body>
+<div class="sidebar">
+    <div class="sidebar__header d-flex flex-column justify-content-around align-items-center px-3 py-2">
+        <span class="sidebar__title"><span class="first-word">
+          Authorize
+        </span><?=service?></span>
+    </div>
+    <hr class="m-0">
+    <div class="sidebar__body py-1 px-3">
+        <div class="row">
+            <div class="col">
+                
+                <div>
+                    <a href="<?=authorizationUrl?>" target="_blank">Click here to sign in to <?=service?></a>
+                </div>
+                
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+                
+                <div>
+                    <p>You'll need to sign in to <?=service?> and give the CRM permission to process payments.</p>
+                </div>
+                
+            </div>
+          </div>
+ 
+
+    </div>
+    <div class="sidebar__footer p-3">
+      <div class="row">
+        <div class="col">
+          <div>
+             </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+<script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
