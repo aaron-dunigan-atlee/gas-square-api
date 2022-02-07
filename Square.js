@@ -1,5 +1,5 @@
 var SQUARE_SANDBOX = false // Set to true for sandbox mode
-
+var DEBUG = true; // More logging
 /**
  * Utilities for interfacing with Square
  */
@@ -110,9 +110,8 @@ var Square = (function (ns)
     if (payload) params.payload = JSON.stringify(payload)
 
     if (DEBUG) console.log("Calling Square using url %s", ns.BASE_URL + endpoint)
-    var response = DEBUG ?
-      UrlFetchApp.fetch(ns.BASE_URL + endpoint, params) :
-      FetchTools.backoffOne(ns.BASE_URL + endpoint, params, { retries: 1 });
+    var response =
+      UrlFetchApp.fetch(ns.BASE_URL + endpoint, params)
     var content = response.getContentText();
     if (DEBUG) console.log("Response code %s", response.getResponseCode())
     // Some endpoints return empty response.
